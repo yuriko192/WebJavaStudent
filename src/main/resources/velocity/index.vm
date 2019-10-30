@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Todo Application</title>
+</head>
+<body>
+<h1>Welcome</h1>
+
+<div>
+    <form method="get" action="$WebPath.getSTUDENTS_ADD()" class="form-inline">
+        <button type="submit" class="btn btn-primary"> <i data-feather="plus"></i> add Students</button>
+    </form>
+    #if($tabel.size()>0)
+        #foreach($student in $tabel)
+            <div class="input-group">
+                <input type="text" class="form-control" value="$student.getId()" readonly>
+                <input type="text" class="form-control" value="$student.getNim()" readonly>
+                <input type="text" class="form-control" value="$student.getFullname()" readonly>
+                <input type="text" class="form-control" value="$student.getAddress()" readonly>
+            </div>
+        #end
+    #end
+</div>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>feather.replace()</script>
+
+</body>
+</html>
