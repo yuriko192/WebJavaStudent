@@ -21,8 +21,8 @@
     #if($tabel.size()>0)
         #foreach($student in $tabel)
             <div class="input-group">
-                <h1>$student.getId() $student.getNim()</h1>
-                
+                <input type="text" class="form-control" value="$student.getId()" readonly>
+                <input type="text" class="form-control" value="$student.getNim()" readonly>
                 <input type="text" class="form-control" value="$student.getFullname()" readonly>
                 <input type="text" class="form-control" value="$student.getAddress()" readonly>
             </div>

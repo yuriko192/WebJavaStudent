@@ -5,7 +5,6 @@ import spark.Route;
 import java.util.HashMap;
 import java.util.Map;
 
-;
 
 public class Controller {
     private static datObj table_m = new datObj();
@@ -18,6 +17,7 @@ public class Controller {
 
     public static Route serveAddPage = (Request req, Response res)->{
         Map<String,Object> model = new HashMap<String, Object>();
+
         return View.render(req,model, Path.Template.STUDENTS_ADD);
     };
 
